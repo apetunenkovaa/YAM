@@ -29,14 +29,38 @@ namespace YP_session_one.Pages
         {
             if (e.Key == Key.Enter)
             {
-                int n = Convert.ToInt32(Number.Text);
+                string num = Number.Text;
+                Employee employees = ClassBase.BD.Employee.FirstOrDefault(x => x.Number == num);
 
+                if (employees != null)
+                {
+                    Password.IsEnabled = true;
+                    Number.IsEnabled = false;
+                    Password.Focus();
+                }
+                else
+                {
+                    MessageBox.Show("Данного сотрудника нет в базе", "Сообщение");
+                }
             }
         }
 
         private void Password_KeyDown(object sender, KeyEventArgs e)
         {
+            if (e.Key == Key.Enter)
+            {
+                string pass = Password.Text;
+                Employee employees = ClassBase.BD.Employee.FirstOrDefault(x => x.Password == pass);
 
+                if (employees != null)
+                {
+                    
+                }
+                else
+                {
+                    MessageBox.Show("Пароль введен неверно", "Сообщение");
+                }
+            }
         }
     }
 }

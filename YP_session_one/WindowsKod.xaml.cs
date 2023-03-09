@@ -10,24 +10,18 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace YP_session_one
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Логика взаимодействия для WindowsKod.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class WindowsKod : Window
     {
-        public MainWindow()
+        public WindowsKod()
         {
             InitializeComponent();
-            ClassBase.BD = new Entities();
-            ClassFrame.lframe = frame;
-            ClassFrame.lframe.Navigate(new Pages.PageAuto());
         }
-
-       
     }
 }

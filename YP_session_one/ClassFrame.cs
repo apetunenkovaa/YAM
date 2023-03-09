@@ -10,7 +10,7 @@ namespace YP_session_one
 {
     class ClassFrame
     {
-        public static ClassFrame frame;
+        public static Frame lframe;
 
     }
 }
