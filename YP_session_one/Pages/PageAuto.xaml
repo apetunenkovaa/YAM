@@ -1,0 +1,69 @@
+﻿<Page x:Class="YP_session_one.Pages.PageAuto"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:YP_session_one.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="PageAuto">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="2*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <StackPanel Grid.Column="0" Orientation="Horizontal" VerticalAlignment="Center">
+                <TextBlock Margin="40,10,10,10" FontSize="20">Телеком Нева Связь</TextBlock>
+            </StackPanel>
+            <StackPanel Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Right">
+                <Image  Height="184" Width="154"></Image>
+            </StackPanel>
+        </Grid>
+        <Grid Grid.Row="1">
+            <TextBlock HorizontalAlignment="Center" Margin="0,7,250,0" FontSize="16">Номер</TextBlock>
+            <TextBox Name="Number" Height="20" Width="140" KeyDown="Number_KeyDown">
+            </TextBox>
+        </Grid>
+
+        <Grid Grid.Row="2" >
+            <TextBlock HorizontalAlignment="Center" Margin="0,7,250,0" FontSize="16">Пароль</TextBlock>
+            <TextBox Name="Password" IsEnabled="False" KeyDown="Password_KeyDown" Height="20" Width="140">
+            </TextBox>
+        </Grid>
+
+        <Grid Grid.Row="3" >
+            <TextBlock HorizontalAlignment="Center" Margin="0,7,250,0" FontSize="16">Код</TextBlock>
+            <TextBox Name="Kod" IsEnabled="False"  Height="20" Width="140">
+            </TextBox>
+            <Button Width="30" Height="30" Margin="200 0 0 0" Background="White">
+                <Image  Width="30" Height="30" />
+            </Button>
+
+        </Grid>
+
+        <Grid Grid.Row="4">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="0">
+                <Button Name="Back" Content="Отмена" Width="80" Height="20"></Button>
+            </Grid>
+            <Grid Grid.Column="1" >
+                <Button Name="Entry"  IsEnabled="False"  Content="Вход" Width="80" Height="20"></Button>
+            </Grid>
+
+        </Grid>
+
+    </Grid>
+</Page>

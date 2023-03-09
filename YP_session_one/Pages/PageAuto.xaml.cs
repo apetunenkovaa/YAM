@@ -13,21 +13,30 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace YP_session_one
+namespace YP_session_one.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Логика взаимодействия для PageAuto.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class PageAuto 
     {
-        public MainWindow()
+        public PageAuto()
         {
             InitializeComponent();
-            ClassBase.BD = new Entities();
-            ClassFrame.frame = frame;
-            ClassFrame.frame.Navigate(new Pages.PageAuto());
         }
 
-       
+        private void Number_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+            {
+                int n = Convert.ToInt32(Number.Text);
+
+            }
+        }
+
+        private void Password_KeyDown(object sender, KeyEventArgs e)
+        {
+
+        }
     }
 }
