@@ -7,6 +7,12 @@
         mc:Ignorable="d"
         Title="WindowsKod" Height="300" Width="500">
     <Grid>
-        
+        <StackPanel HorizontalAlignment="Center">
+            <TextBlock HorizontalAlignment="Center">Запомните код</TextBlock>
+            <Canvas Background="Wheat" Name="canvas" Width="270" Height="100">
+
+            </Canvas>
+            <Button  Click="buttonCaptcha_Click" Name="buttonCaptcha" Margin="0,10,0,0">ОК</Button>
+        </StackPanel>
     </Grid>
 </Window>
